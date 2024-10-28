@@ -180,3 +180,6 @@ if __name__ == "__main__":
         if contain_history_chat:
             assistant_answer = answer.replace(new_prompt, "")
             messages.append({"role": "assistant", "content": assistant_answer})
+
+
+

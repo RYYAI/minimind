@@ -43,7 +43,8 @@ class PretrainDataset(Dataset):
         sample = self.data[index]
         X = np.array(sample[:-1]).astype(np.int64)  # 输入数据（去掉最后一个 token）
         Y = np.array(sample[1:]).astype(np.int64)  # 目标数据（去掉第一个 token）
-
+        # pretrain 中预测下一个词 
+        
         return torch.from_numpy(X), torch.from_numpy(Y)  # 返回 PyTorch 张量
 
 # 定义 SFTDataset 类，继承自 Dataset

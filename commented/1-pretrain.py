@@ -176,6 +176,7 @@ if __name__ == "__main__":
     # init model
     model = init_model()  # 初始化模型
 
+
     scaler = torch.cuda.amp.GradScaler(enabled=(dtype == dtype))  # 初始化梯度缩放器
     # optimizer
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)  # 初始化优化器

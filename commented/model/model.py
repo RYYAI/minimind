@@ -310,17 +310,7 @@ class TransformerBlock(nn.Module):
         return out  # 返回输出
 
 # 定义 Transformer 类，实现整个 Transformer 模型
-class Transformer(PreTrainedModel):
-    config_class = LMConfig
-    last_loss: Optional[torch.Tensor]
 
-    def __init__(self, params: LMConfig = None):
-        super().__init__(params)
-        if not params:
-            params = LMConfig()
-        self.params = params
-        self.vocab_size = params.vocab_size
-        self.n_layers = params.n_layers
 class Transformer(PreTrainedModel):
     config_class = LMConfig
     last_loss: Optional[torch.Tensor]
